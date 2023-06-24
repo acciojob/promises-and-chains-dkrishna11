@@ -14,10 +14,7 @@ function handleSubmit(event) {
     alert('Please enter both age and name.');
     return;
   }
-
-  // Create a promise
   const promise = new Promise((resolve, reject) => {
-    // Simulate asynchronous processing after 4 seconds
     setTimeout(() => {
       if (age >= 18) {
         resolve(`Welcome, ${name}. You can vote.`);
@@ -26,8 +23,6 @@ function handleSubmit(event) {
       }
     }, 4000);
   });
-
-  // Handle promise resolution/rejection
   promise
     .then((message) => {
       alert(message);
